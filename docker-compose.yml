@@ -1,0 +1,46 @@
+---
+# redmine.invento.by
+version: '2'
+services:
+  mail:
+    image: elsdoerfer/exim-sender
+    environment:
+      ALLOWED_HOSTS: '*'
+      PRIMARY_HOST: redmine.invento.by
+    volumes:
+      - /tmp/exim:/var/spool/exim4
+    logging:
+        driver: journald
+
+  db:
+    image: mysql:latest
+    ports:
+      - 5432:5432
+    environment:
+      - MYSQL_USER=redmine
+      - MYSQL_PASSWORD=pa55w0rd
+      - MYSQL_DATABASE=redmine
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+       - ./.mysql_data:/var/lib/mysql
+       - ./db/init:/docker-entrypoint-initdb.d
+    logging:
+       driver: journald
+
+  app:
+    build: ./app
+    links:
+      - db
+      - mail
+    volumes:
+      - ./app/files/:/home/app/redmine/files/:rw
+    ports:
+      - 8085:80
+    logging:
+        driver: journald
+
+volumes:
+  .mysql_data:
+      driver: local
+  files:
+      driver: local
