@@ -34,7 +34,7 @@ RUN rm -rf /home/app/redmine/log
 RUN mkdir /home/app/redmine/tmp && chown -R app: /home/app/redmine/tmp && chmod -R 775 /home/app/redmine/tmp
 RUN mkdir /home/app/redmine/log && chown -R app: /home/app/redmine/log && chmod -R 775 /home/app/redmine/log
 
-RUN mkdir /home/app/redmine/files && chown -R app: /home/app/redmine/files && chmod -R 775 /home/app/redmine/files
+RUN mkdir -p /home/app/redmine/files && chown -R app: /home/app/redmine/files && chmod -R 775 /home/app/redmine/files
 
 RUN chown -R app: /home/app/redmine/public/plugin_assets && chmod -R 775 /home/app/redmine/public/plugin_assets
 
