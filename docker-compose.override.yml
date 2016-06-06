@@ -1,0 +1,15 @@
+---
+# redmine.example.com
+version: '2'
+services:
+  mail:
+    volumes:
+      - /tmp/exim4:/var/spool/exim4
+
+  db:
+    ports:
+      - 5432:5432
+
+  app:
+    ports:
+      - 8080:80

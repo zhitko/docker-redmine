@@ -8,5 +8,5 @@ production:
   database: redmine
   host: db
   username: redmine
-  password: pa55w0rd
+  password: password
   encoding: utf8
