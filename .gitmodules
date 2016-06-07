@@ -1,3 +1,57 @@
 [submodule "redmine"]
       path = app/redmine-sources
       url = https://github.com/redmine/redmine.git
+[submodule "plugins-available/redcase"]
+	path = plugins-available/redcase
+	url = https://vzhitko@bitbucket.org/bugzinga/redcase.git
+[submodule "plugins-available/redmine_highlightjs"]
+	path = plugins-available/redmine_highlightjs
+	url = https://github.com/dominch/redmine_highlightjs.git
+[submodule "plugins-available/redmine_agile"]
+	path = plugins-available/redmine_agile
+	url = https://github.com/RCRM/redmine_agile.git
+[submodule "plugins-available/redmine_bitbucket"]
+	path = plugins-available/redmine_bitbucket
+	url = https://vzhitko@bitbucket.org/steveqx/redmine_bitbucket.git
+[submodule "plugins-available/redmine_checklists"]
+	path = plugins-available/redmine_checklists
+	url = https://github.com/RCRM/redmine_checklists.git
+[submodule "plugins-available/redmine_dmsf"]
+	path = plugins-available/redmine_dmsf
+	url = https://github.com/danmunn/redmine_dmsf.git
+[submodule "plugins-available/a_common_libs"]
+	path = plugins-available/a_common_libs
+	url = https://vzhitko@bitbucket.org/dkuk/a_common_libs.git
+[submodule "plugins-available/redmine_issue_tabs"]
+	path = plugins-available/redmine_issue_tabs
+	url = https://github.com/dkuk/redmine_issue_tabs.git
+[submodule "plugins-available/redmine_jstoolbar_ext"]
+	path = plugins-available/redmine_jstoolbar_ext
+	url = https://github.com/tleish/redmine_jstoolbar_ext.git
+[submodule "plugins-available/redmine_jstoolbar_ext_buttons"]
+	path = plugins-available/redmine_jstoolbar_ext_buttons
+	url = https://github.com/tleish/redmine_jstoolbar_ext_buttons.git
+[submodule "plugins-available/redmine_jstoolbar_ext_coderay"]
+	path = plugins-available/redmine_jstoolbar_ext_coderay
+	url = https://github.com/tleish/redmine_jstoolbar_ext_coderay.git
+[submodule "plugins-available/redmine_lightbox2"]
+	path = plugins-available/redmine_lightbox2
+	url = https://github.com/paginagmbh/redmine_lightbox2.git
+[submodule "plugins-available/redmine_people"]
+	path = plugins-available/redmine_people
+	url = https://github.com/RCRM/redmine_people.git
+[submodule "plugins-available/redmine_workflow_enhancements"]
+	path = plugins-available/redmine_workflow_enhancements
+	url = https://github.com/dr-itz/redmine_workflow_enhancements.git
+[submodule "plugins-available/redmine_zenedit"]
+	path = plugins-available/redmine_zenedit
+	url = https://github.com/RCRM/redmine_zenedit.git
+[submodule "plugins-available/time_logger"]
+	path = plugins-available/time_logger
+	url = https://github.com/speedy32129/time_logger.git
+[submodule "plugins-available/usability"]
+	path = plugins-available/usability
+	url = https://vzhitko@bitbucket.org/dkuk/usability.git
+[submodule "themes/redmine_alex_skin"]
+	path = themes/redmine_alex_skin
+	url = https://vzhitko@bitbucket.org/dkuk/redmine_alex_skin.git
