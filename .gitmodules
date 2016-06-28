@@ -55,3 +55,6 @@
 [submodule "themes/redmine_alex_skin"]
 	path = themes/redmine_alex_skin
 	url = https://vzhitko@bitbucket.org/dkuk/redmine_alex_skin.git
+[submodule "plugins-available/redmine_theme_changer"]
+        path = plugins-available/redmine_theme_changer
+        url = https://vzhitko@bitbucket.org/haru_iida/redmine_theme_changer
