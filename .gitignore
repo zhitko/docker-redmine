@@ -3,3 +3,5 @@ app/redmine-sources/
 .mysql_data
 redmine-sources.zip
 db/init/
+themes-enabled/
+plugins-enabled/
