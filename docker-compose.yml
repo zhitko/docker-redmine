@@ -29,6 +29,7 @@ services:
       - mail
     volumes:
       - ./app/files/:/home/app/redmine/files/:rw
+      - ./themes-enabled:/home/app/redmine/public/themes/
 
 volumes:
   .mysql_data:
