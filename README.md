@@ -17,7 +17,9 @@
 ### Add theme
 
 > sudo mount --bind /path_to_docker-redmine/themes-available/theme_name /path_to_docker-redmine/themes-enabled/theme_name
+
 or
+
 > cp /path_to_docker-redmine/themes-available/theme_name /path_to_docker-redmine/themes-enabled/
 >
 > docker-compose restart
@@ -25,7 +27,9 @@ or
 ### Add plugin
 
 > sudo mount --bind /path_to_docker-redmine/plugin-available/plugin_name /path_to_docker-redmine/plugin-enabled/plugin_name
+
 or
+
 > cp /path_to_docker-redmine/plugin-available/plugin_name /path_to_docker-redmine/plugin-enabled/
 >
 > ./redmine-setup.sh
