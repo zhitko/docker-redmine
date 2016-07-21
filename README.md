@@ -2,7 +2,7 @@
 
 ## Setup
 
-> git clone https://github.com/zhitko/docker-redmine.git
+> git clone https://repo_url
 > git submodule update --init --recursive
 > cp .env.example .env
 > docker-compose up -d
