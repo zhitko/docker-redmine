@@ -4,6 +4,7 @@
 
 > git clone https://github.com/zhitko/docker-redmine.git
 > git submodule update --init --recursive
+> cp .env.example .env
 > docker-compose up -d
 > ./redmine-setup.sh
 > docker-compose restart

@@ -8,7 +8,7 @@ services:
       - "/tmp/exim4:/var/spool/exim4"
     environment:
       ALLOWED_HOSTS: '*'
-      PRIMARY_HOST: redmine.example.com
+      PRIMARY_HOST: "${REDMINE_HOST}"
 
   db:
     container_name: "${PREFIX}_db"
