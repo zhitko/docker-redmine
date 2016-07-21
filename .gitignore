@@ -5,3 +5,4 @@ plugins-enabled/
 db_data/
 redmine-sources.zip
 db/init/
+.env
