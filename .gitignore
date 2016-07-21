@@ -1,7 +1,7 @@
-app/files/
-app/redmine-sources/
-.mysql_data
-redmine-sources.zip
-db/init/
+redmine_files/
+redmine_ssh/
 themes-enabled/
 plugins-enabled/
+db_data/
+redmine-sources.zip
+db/init/

@@ -4,35 +4,37 @@ version: '2'
 services:
   mail:
     image: elsdoerfer/exim-sender
-    container_name: redmine_mail
-    environment:
-      ALLOWED_HOSTS: '*'
-      PRIMARY_HOST: redmine.example.com
 
   db:
     image: mysql:latest
-    container_name: redmine_db
     environment:
       - MYSQL_USER=test
       - MYSQL_PASSWORD=admin
       - MYSQL_DATABASE=admin
       - MYSQL_ALLOW_EMPTY_PASSWORD=no
     volumes:
-       - ./.mysql_data:/var/lib/mysql
+       - db_data:/var/lib/mysql
        - ./db/init:/docker-entrypoint-initdb.d
 
   app:
     build: ./app
-    container_name: redmine_app
     links:
       - db
       - mail
     volumes:
-      - ./app/files/:/home/app/redmine/files/:rw
-      - ./themes-enabled:/home/app/redmine/public/themes/
+      - redmine_files:/home/app/redmine/files/:rw                                                                                                                                                                 
+      - redmine_ssh:/home/app/.ssh                  
+      - themes-enabled:/home/app/redmine/public/themes/                                                                                                                                                        
+      - plugins-enabled:/home/app/redmine/plugins/       
 
 volumes:
-  .mysql_data:
+  db_data:
       driver: local
-  files:
+  redmine_files:
+      driver: local
+  redmine_ssh:
+      driver: local
+  themes-enabled:
+      driver: local
+  plugins-enabled:
       driver: local

@@ -1,3 +1,20 @@
-Base docker container for Redmine 
+# Base docker container for Redmine 
 
-sudo mount --bind /home/ubuntu/docker-redmine/themes-available/redmine_alex_skin /home/ubuntu/docker-redmine/themes-enabled/redmine_alex_skin
+## Setup
+
+> git clone https://github.com/zhitko/docker-redmine.git
+> git submodule update --init --recursive
+> docker-compose up -d
+> ./redmine-setup.sh
+> docker-compose restart
+
+### Add theme
+
+> sudo mount --bind /path_to_docker-redmine/themes-available/theme_name /path_to_docker-redmine/themes-enabled/theme_name
+> docker-compose restart
+
+### Add plugin
+
+> sudo mount --bind /path_to_docker-redmine/plugin-available/plugin_name /path_to_docker-redmine/plugin-enabled/plugin_name
+> ./redmine-setup.sh
+> docker-compose restart

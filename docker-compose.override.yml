@@ -3,13 +3,17 @@
 version: '2'
 services:
   mail:
+    container_name: "${PREFIX}_mail"
     volumes:
-      - /tmp/exim4:/var/spool/exim4
+      - "/tmp/exim4:/var/spool/exim4"
+    environment:
+      ALLOWED_HOSTS: '*'
+      PRIMARY_HOST: redmine.example.com
 
   db:
-    ports:
-      - 5432:5432
+    container_name: "${PREFIX}_db"
 
   app:
+    container_name: "${PREFIX}_app"
     ports:
-      - 8080:80
+      - "${EXTERNAL_PORT}:80"
